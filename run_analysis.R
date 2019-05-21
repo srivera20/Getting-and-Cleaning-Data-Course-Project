@@ -14,7 +14,7 @@ data_y <- rbind(test_y, train_y)
 subject_bind <- rbind(subject_test, subject_train)
 data_merged <- cbind(data_x, data_y, subject_bind)
 extract <- select(data_merged, subject, code, contains("mean"), contains("std"))
-extract_activities <- activities[extract$code, ]
+extract_activities <- activities[extract$code, 2]
 
 names(extract)[2] = "activity"
 names(extract)<-gsub("Acc", "Accelerometer", names(extract))
