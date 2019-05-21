@@ -1,0 +1,23 @@
+CodeBook
+Dataset
+Download the data set under the folder name UCI HAR Data
+
+Variables
+features Reads the file features.txt
+activities Reads the file activity_labels.txt
+subject_test Reads the file subject_test.txt
+test_x Reads the file X_test.txt 
+test_y Reads the file Y_test.txt
+subject_train Reads the file ubject_train
+train_y Reads the file Y_train.txt
+train_x Reads the file X_train.txt
+
+data_x merges the test_x and train_x variables
+data_y merges the test_y and train_y variables
+subject_bind merges the subject_test and subject_train variables
+data_merged merges all the variables above
+
+extract extracts the mean and standar deviation by subject and code
+extract_activities extracts the activities by code of the data
+
+final_average prints the mean of the data by subject and activity
